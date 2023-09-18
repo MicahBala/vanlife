@@ -1,5 +1,5 @@
-function Dashboars() {
-  return <div>Dashboars</div>
+function Dashboard() {
+  return <div>Dashboard Here!</div>
 }
 
-export default Dashboars
+export default Dashboard
