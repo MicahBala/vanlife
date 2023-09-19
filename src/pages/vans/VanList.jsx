@@ -5,7 +5,7 @@ function VanList() {
   const [vans, setVans] = useState([])
   const [searchParams, setSearchParams] = useSearchParams()
   const typeFilter = searchParams.get('type')
-  console.log('searchParams: ', typeFilter)
+  // console.log('searchParams: ', typeFilter)
 
   useEffect(() => {
     fetch('/api/vans')
@@ -20,7 +20,10 @@ function VanList() {
   const vanElements = displayedVans.map((van) => {
     return (
       <div key={van.id} className='van-tile'>
-        <Link to={`/vans/${van.id}`}>
+        <Link
+          to={`/vans/${van.id}`}
+          state={{ search: `?${searchParams.toString()}`, type: typeFilter }}
+        >
           <img src={van.imageUrl} />
           <div className='van-info'>
             <h3>{van.name}</h3>
