@@ -14,6 +14,7 @@ import HostVanPhotos from './pages/host/HostVanPhotos.jsx'
 import HostVanPricing from './pages/host/HostVanPricing.jsx'
 import HostVanInfo from './pages/host/HostVanInfo.jsx'
 import './server.jsx'
+import NotFound from './pages/NotFound.jsx'
 
 function App() {
   return (
@@ -24,7 +25,6 @@ function App() {
           <Route path='about' element={<About />} />
           <Route path='vans' element={<VanList />} />
           <Route path='vans/:id' element={<VanDetail />} />
-
           <Route path='host' element={<HostLayout />}>
             <Route index element={<Dashboard />} />
             <Route path='income' element={<Income />} />
@@ -36,6 +36,8 @@ function App() {
               <Route path='photos' element={<HostVanPhotos />} />
             </Route>
           </Route>
+          <Route path='*' element={<NotFound />} />
+          {/* Catch-all route, matches any route note defined, it doesnt matter wher you put it */}
         </Route>
       </Routes>
     </>

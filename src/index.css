@@ -493,3 +493,14 @@ i[class*='van-type-'] {
 .van-type {
   margin-right: 1rem;
 }
+
+.not-found-container {
+  padding-inline: 26px;
+}
+
+.not-found-container .link-button {
+  width: 100%;
+  margin-top: 2rem;
+  background-color: #161616;
+  color: white;
+}
