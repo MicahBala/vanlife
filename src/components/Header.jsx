@@ -1,4 +1,5 @@
 import { Link, NavLink } from 'react-router-dom'
+import { FaRegUserCircle } from 'react-icons/fa'
 
 function Header() {
   return (
@@ -25,6 +26,10 @@ function Header() {
         >
           Vans
         </NavLink>
+
+        <Link to='login' className='login-link'>
+          <FaRegUserCircle className='login-icon' />
+        </Link>
       </nav>
     </header>
   )
